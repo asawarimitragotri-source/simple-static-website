@@ -1,19 +1,21 @@
-
- 
-body {
-    font-family: Arial, sans-serif;
+ * {
     margin: 0;
     padding: 0;
-    line-height: 1.6;
+    box-sizing: border-box;
 }
 
-/* Nav Bar */
+body {
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(to right, #8ec5fc, #e0c3fc);
+    color: #222;
+}
+
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: black;
-    padding: 15px 20px;
+    padding: 15px 25px;
+    background: rgba(0,0,0,0.7);
     color: white;
 }
 
@@ -24,38 +26,78 @@ body {
 }
 
 .navbar a {
-    color: white;
     text-decoration: none;
+    color: white;
+    font-weight: 500;
+    transition: 0.3s;
 }
 
-/* Hero Section */
+.navbar a:hover {
+    border-bottom: 2px solid white;
+    padding-bottom: 4px;
+}
+
 .hero {
     text-align: center;
-    padding: 40px 20px;
+    padding: 90px 20px;
+    color: white;
+    background: url("https://images.unsplash.com/photo-1518770660439-4636190af475") center/cover no-repeat;
 }
 
-.hero img {
-    width: 400px;
+.btn {
+    display: inline-block;
     margin-top: 20px;
-    border-radius: 10px;
+    padding: 12px 25px;
+    border-radius: 30px;
+    background: white;
+    color: black;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.3s;
 }
 
-/* Footer */
+.btn:hover {
+    opacity: 0.8;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    padding: 40px 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: white;
+    width: 250px;
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+}
+
 footer {
     text-align: center;
-    background: #222;
+    padding: 15px;
+    background: rgba(0,0,0,0.8);
     color: white;
-    padding: 10px;
+    margin-top: 20px;
 }
 
-/* 📱 Responsive for Mobile */
 @media (max-width: 600px) {
     .navbar ul {
         flex-direction: column;
         gap: 10px;
     }
-
-    .hero img {
-        width: 90%;
+    .cards {
+        flex-direction: column;
+        align-items: center;
     }
 }
+
